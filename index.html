@@ -3,4 +3,33 @@ layout: default
 is: home
 ---
 
-Hello World!
+{% for patternType in site.patterns %}
+	<h1>{{ patternType | append: "s"}}</h1>
+
+	{% for item in site.pages %}
+		{% if item.type == patternType %}
+			<article class="post card">
+		    <h2 class="post-title"><a href="{{site.baseurl}}/{{ page.url }}">{{ item.title }}</a></h2>
+		    {{ item.content }}
+
+		    {% case patternType %}
+		    	{% when 'atom' %}
+				    {% capture atom_count %} {{ atom_count | plus: 1 }} {% endcapture %}
+		    	{% when 'molecule' %}
+				    {% capture molecule_count %} {{ molecule_count | plus: 1 }} {% endcapture %}
+				  {% when 'organism' %}
+				    {% capture organism_count %} {{ organism_count | plus: 1 }} {% endcapture %}
+		    {% endcase %}
+
+		  </article>
+		{% endif %}
+	{% endfor %}
+
+{% endfor %}
+
+<hr>
+<pre>
+Atoms: {{ atom_count }}
+Molecules: {{ molecule_count }}
+Organisms: {{ organism_count }}
+</pre>

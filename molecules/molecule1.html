@@ -1,0 +1,13 @@
+---
+layout: default
+title: molecule1
+type: molecule
+---
+
+molecule1 content
+
+{% for pattern in site.pages %}
+	{% if pattern.title == atom1 %}
+		{{pattern.content}}
+	{% endif %}
+{% endfor %}

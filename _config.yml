@@ -9,12 +9,12 @@ redcarpet:
   extensions: ["with_toc_data"]
 
 # global site configs
-domain: http://draftingcode.com/jekyll-seed
-name: jekyll-seed
-tagline: grow a modern static site with Jekyll
-abstract: derp
+domain: http://github.com/zakkain/patternlab-jekyll
+name: Pattern Lab
+tagline: A flat-file “port” of @bradfrost's Pattern Lab using Jekyll
+abstract: 'All matter, no matter how complex, can be broken down into molecules which can be broken down further into atomic elements. All web interfaces can be broken down down the same way. Atomic Design provides a methodology for building an effective design system. It consists of five distinct stages: atoms, molecules, organisms, templates and pages.'
 owner: Zachary Kain
-repo: jekyll-seed
+repo: patternlab-jekyll
 
 # web services
 twitter: zakkain
@@ -25,3 +25,10 @@ typekit: ''
 analytics:
   google: ''
   # add your own here! gaug.es, etc
+
+# repo-specific
+patterns:
+- atom
+- molecule
+- organism
+# - template
