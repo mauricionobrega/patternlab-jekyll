@@ -1,4 +1,9 @@
-# Jekyll Seed
+# A flat-file “port” of @bradfrost's Pattern Lab using Jekyll
+
+- - -
+
+
+## Jekyll Seed
 
 This is an initial seed structure for creating new projects using Jekyll.
 
