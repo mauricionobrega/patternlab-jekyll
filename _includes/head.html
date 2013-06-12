@@ -1,0 +1,33 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+
+  <!-- add external assets to prefetch here -->
+  <link rel="dns-prefetch" href="//use.typekit.net">
+  <link rel="dns-prefetch" href="//code.jquery.com">
+  {% unless site.analytics.google == '' %}
+	  <link rel="dns-prefetch" href="//www.google-analytics.com">
+  {% endunless %}
+
+	{% if page.is == 'home' %}
+		<title>{{ site.name }} — {{ site.tagline }}</title>
+		<meta name="description" content="{{ site.abstract }}">
+	{% else %}
+		<title>{{ page.title }} | {{ site.name }}</title>
+		<meta name="description" content="{{ page.abstract }}">
+	{% endif %}
+
+  <meta name="viewport" content="width=device-width">
+  <meta name="robots" content="all">
+  <!-- as per David Walsh: http://davidwalsh.name/msapplication-task -->
+  <meta name="application-name" content="{{ site.name}}">
+  <meta name="msapplication-tooltip" content="{{ site.tagline }}">
+
+  <link rel='stylesheet' href='{{site.baseurl}}css/styles.css'>
+
+	{% include _icons.html %}
+
+	{% include _webfonts.html %}
+
+	{% include _meta-social.html %}
+</head>

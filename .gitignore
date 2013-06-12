@@ -1,0 +1,9 @@
+# jekyll
+_site/
+
+# preprocessors
+.sass-cache
+
+# osx
+.DS_Store
+Icon

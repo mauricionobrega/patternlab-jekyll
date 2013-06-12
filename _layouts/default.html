@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	{% include head.html %}
+</head>
+
+<body>
+	<!-- header -->
+	{% include site-header.html %}
+
+	<!-- body -->
+	<main role="main">
+		{{ content }}
+	</main>
+
+	<!-- footer -->
+	{% include site-footer.html %}
+
+	<!-- javascript -->
+	{% include _scripts.html %}
+</body>
+
+</html>

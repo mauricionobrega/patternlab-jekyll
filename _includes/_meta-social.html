@@ -1,0 +1,30 @@
+<!--  twitter cards -->
+<meta name="twitter:site" content="@{{ site.twitter }}">
+<meta name="twitter:creator" content="@{{ site.twitter }}">
+<meta name="twitter:url" content="{{ site.domain }}{{ page.url }}">
+
+{% if page.twittercard.type == 'photo' %}
+  <meta name="twitter:card" content="photo">
+  <meta name="twitter:image" content="{{ site.baseurl }}img/posts/{{ page.twittercard.image }}">
+  <meta name="twitter:image:width" content="{{ page.twittercard.imagewidth }}">
+  <meta name="twitter:image:height" content="{{ page.twittercard.imageheight }}">
+{%else%}
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:image" content="{{ site.baseurl }}img/logo-social.png">
+{% endif %}
+
+{% if page.is == 'home' %}
+	<meta name="twitter:title" content="{{ site.name }}">
+	<meta name="twitter:description" content="{{ site.abstract }}">
+{% else %}
+	<meta name="twitter:title" content="{{ page.title }}">
+	<meta name="twitter:description" content="{{ page.abstract }}">
+{% endif %}
+
+<!-- facebook open graph -->
+<meta property="og:title" content="{{ page.title }}">
+<meta property="og:image" content="{{ site.baseurl }}img/logo-social.png">
+<meta property="og:url" content="{{ site.domain }}{{ page.url }}">
+<meta property="og:description" content="{{ page.abstract }}">
+<meta property="og:site_name" content="{{ site.name }}">
+<meta property="og:type" content="blog">

@@ -1,0 +1,27 @@
+# core jekyll configs
+exclude: ['README.md', 'config.rb']
+
+# content settings
+permalink: none
+pygments: true
+markdown: redcarpet
+redcarpet:
+  extensions: ["with_toc_data"]
+
+# global site configs
+domain: http://draftingcode.com/jekyll-seed
+name: jekyll-seed
+tagline: grow a modern static site with Jekyll
+abstract: derp
+owner: Zachary Kain
+repo: jekyll-seed
+
+# web services
+twitter: zakkain
+github: zakkain
+typekit: ''
+
+# analytics accounts (only builds scripts for non-default values)
+analytics:
+  google: ''
+  # add your own here! gaug.es, etc
