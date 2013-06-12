@@ -6,8 +6,10 @@ type: molecule
 
 molecule1 content
 
-{% for pattern in site.pages %}
-	{% if pattern.title == atom1 %}
-		{{pattern.content}}
-	{% endif %}
-{% endfor %}
+<span style="outline: 1px solid red;">
+	{% for pattern in site.pages %}
+		{% if pattern.title == 'atom3' %}
+			{{pattern.content}}
+		{% endif %}
+	{% endfor %}
+</span>

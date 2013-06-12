@@ -5,3 +5,11 @@ type: atom
 ---
 
 atom2 content
+
+<span style="outline: 1px solid red;">
+	{% for pattern in site.pages %}
+		{% if pattern.title == 'atom3' %}
+			{{pattern.content}}
+		{% endif %}
+	{% endfor %}
+</span>
