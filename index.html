@@ -4,31 +4,12 @@ is: home
 ---
 
 <h1>Atoms</h1>
-{% for page in site.pages %}
-	{% if page.type == 'atom' %}
-	<article>
-		<h2>{{page.name}}</h2>
-		{{page.content}}
-	</article>
-	{% endif %}
-{% endfor %}
+<pre>
+	{% include atoms/atom1.html %}
+	{% include atoms/atom2.html %}
+</pre>
 
 <h1>Molecules</h1>
-{% for page in site.pages %}
-	{% if page.type == 'molecule' %}
-	<article>
-		<h2>{{page.name}}</h2>
-		{{page.content}}
-	</article>
-	{% endif %}
-{% endfor %}
-
-<h1>Organisms</h1>
-{% for page in site.pages %}
-	{% if page.type == 'organism' %}
-	<article>
-		<h2>{{page.name}}</h2>
-		{{page.content}}
-	</article>
-	{% endif %}
-{% endfor %}
+<pre>
+	{% include molecules/molecule1.html %}
+</pre>
