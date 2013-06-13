@@ -1,0 +1,12 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zakkain\/Sites\/patternlab-jekyll\/_sass\/styles\.scss}line{font-family:\000033}}
+body {
+  padding-left: 3em;
+  max-width: 800px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/zakkain\/Sites\/patternlab-jekyll\/_sass\/styles\.scss}line{font-family:\000038}}
+.atom, .molecule, .organism {
+  outline: 1px solid lightgrey;
+  padding: 1.5em;
+  margin: 1.5em 0;
+}

@@ -1,1 +1,12 @@
 @import "compass";
+
+body {
+	padding-left: 3em;
+	max-width: 800px;
+}
+
+.atom, .molecule, .organism {
+	outline: 1px solid lightgrey;
+	padding: 1.5em;
+	margin: 1.5em 0;
+}
