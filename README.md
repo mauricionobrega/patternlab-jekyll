@@ -1,35 +1,11 @@
 # A flat-file “port” of @bradfrost's Pattern Lab using Jekyll
 
-- - -
+## How it works
 
+1. the index file has an include statement for each stratum of the design system (Atoms, Molecules, Organisms, Templates). Pages can live in actual Jekyll pages for now.
+2. this included file is itself a list of include statements, bringing in every element of the appropriate type individually
+3. higher order types, like molecules, consist of html and include statements that incorporate the lower orders (for example, an organism might include two molecules and three atoms)
 
-## Jekyll Seed
+This system is easy to maintain and create – the downside is that when a new Atom (for example) is created, _atoms.html_ (the file listing every Atom) must be manually updated. **This is because Jekyll does not allow for looping or iterating through *include* statements.**
 
-This is an initial seed structure for creating new projects using Jekyll.
-
-Some highlights:
-
-- focus on includes and modular structure
-- Sass for CSS preprocessing
-- full favicon/touch/tile icon support
-- Twitter Card & openGraph (Facebook) `<meta>` tags
-- lots more
-
-## Dev Notes
-
-todo: all the icons and stuff
-
-- logo-social 280x280
-- mstile 144x144
-- favicon.png 32x32
-- favicon.ico 16x16 and 32x32 (http://xiconeditor.com/)
-- basic touch icon 57x57
-
-log the various page YAML variables I've set up:
-
-- page.abstract
-- page.title
-- page.twittercard.type [photo]
-- page.twittercard.width
-- page.twittercard.height
-- page.twittercard.image
+Personally, I can live with that.
